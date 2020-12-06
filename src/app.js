@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Button from './components/button/button';
+
 import './tailwind.css';
 import logoUrl from './images/logo.svg';
 import beachWorkImgUrl from './images/beach-work.jpg';
@@ -19,7 +21,10 @@ function App() {
 						Workcation helps you find work-friendly rentals in beautiful locations so you can enjoy some nice weather even when you're not on vacation.
 					</p>
 					<div className="mt-4 sm:mt-6">
-						<a className="inline-block bg-indigo-500 text-white px-5 py-3 shadow-lg rounded-lg uppercase text-sm tracking-wider font-semibold sm:text-base" href="#">Book your escape</a>
+						{/* <a className="btn btn-indigo shadow-lg" href="#">Book your escape</a>
+						<a className="btn btn-gray shadow-lg ml-2" href="#">Learn more</a> */}
+						<Button className="shadow-lg">Book your escape</Button>
+						<Button className="ml-2" type="secondary">Learn more</Button>
 					</div>
 				</div>
 			</div>
