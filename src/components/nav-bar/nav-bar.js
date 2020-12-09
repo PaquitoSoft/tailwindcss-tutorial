@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import { buildStyles } from '../../plugins/utils';
 
+import AccountDropdownSM from '../account-dropdown/account-dropdown.sm';
+import AccountDropdownXS from '../account-dropdown/account-dropdown.xs';
+import AccountDropdown from '../account-dropdown/account-dropdown';
+
 import rawStyles from './nav-bar.styles';
 
 import logoUrl from '../../images/logo.svg';
@@ -38,13 +42,32 @@ function NavBar() {
 				</div>
 			</div>
 
-			<div className={`${styles.drawer} ${isOpen ? 'block' : 'hidden'}`}>
-				<a href="#" className={styles.drawerLink}>List your property</a>
-				<a href="#" className={`${styles.drawerLink} mt-1`}>Trips</a>
-				<a href="#" className={`${styles.drawerLink} mt-1`}>Messages</a>
-			</div>
+			<nav className={`${isOpen ? 'block' : 'hidden'} sm:flex sm:items-center`}>
+				<div className={styles.drawerMainLinks}>
+					<a href="#" className={styles.drawerLink}>List your property</a>
+					<a href="#" className={`${styles.drawerLink} mt-1`}>Trips</a>
+					<a href="#" className={`${styles.drawerLink} mt-1`}>Messages</a>
+					{/* <AccountDropdownSM className="hidden sm:block sm:ml-6" /> */}
+				</div>
+				<AccountDropdown />
+			</nav>
 		</header>
 	);
 }
 
 export default NavBar;
+
+/*
+	<div className="px-4 py-5 border-t border-gray-800 sm:hidden">
+		<div className="flex items-center">
+			<img className="h-8 w-8 border-2 border-gray-600 rounded-full" src="https://avatars3.githubusercontent.com/u/166022?s=400&v=4" alt="PaquitoSoft"/>
+			<span className="text-white font-semibold ml-3">PaquitoSoft</span>
+		</div>
+							
+		<div className="mt-4">
+			<a className="block text-gray-400 hover:text-white" href="#">Settings</a>
+			<a className="block text-gray-400 hover:text-white mt-2" href="#">Support</a>
+			<a className="block text-gray-400 hover:text-white mt-2" href="#">Logout</a>
+		</div>
+	</div>
+*/

@@ -32,12 +32,12 @@ export default {
 		'w-6',
 		'fill-current'
 	],
-	drawer: [
+	drawerMainLinks: [
 		'px-2',
 		'pt-2',
 		'pb-4',
-		'sm:block',
-		'sm:flex'
+		'sm:flex',
+		'sm:ml-6'
 	],
 	drawerLink: [
 		'block',
