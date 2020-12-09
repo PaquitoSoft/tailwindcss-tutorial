@@ -2,6 +2,7 @@ import React from 'react';
 
 import Button from './components/button/button';
 import DestinationCard from './components/destination-card/destination-card';
+import NavBar from './components/nav-bar/nav-bar';
 
 import './tailwind.css';
 import logoUrl from './images/logo.svg';
@@ -18,6 +19,7 @@ const destinations = [
 function App() {
 	return (
 		<main>
+			<NavBar />
 			<div className="bg-gray-100 flex">
 				<div className="px-8 py-12 max-w-md sm:max-w-xl mx-auto lg:w-1/2 lg:max-w-full lg:py-24 lg:px-12">
 					<div className="xl:max-w-lg xl:ml-auto">

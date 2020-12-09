@@ -5,14 +5,31 @@
 	"main": "index.js",
 	"scripts": {
 		"start": "parcel serve ./public/index.html",
-		"build": "parcel build ./public/index.html"
+		"build": "cross-env NODE_ENV=production parcel build ./public/index.html",
+		"docs:serve": "styleguidist server",
+		"docs:build": "styleguidist build"
 	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
+	"browserslist": [
+		">1%",
+		"last 1 version",
+		"Firefox ESR",
+		"not dead"
+	],
 	"devDependencies": {
+		"@babel/core": "^7.12.9",
+		"@babel/preset-env": "^7.12.7",
+		"@babel/preset-react": "^7.12.7",
+		"babel-loader": "^8.2.2",
+		"cross-env": "^7.0.3",
+		"css-loader": "^5.0.1",
 		"parcel": "^1.12.4",
-		"tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.1"
+		"react-styleguidist": "^11.1.5",
+		"style-loader": "^2.0.0",
+		"tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.1",
+		"webpack": "^5.10.0"
 	},
 	"dependencies": {
 		"autoprefixer": "^9.8.6",
