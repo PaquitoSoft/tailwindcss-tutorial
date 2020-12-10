@@ -34,11 +34,11 @@ function App() {
 							<p className="mt-2 text-gray-600 sm:text-xl sm:mt-4">
 								Workcation helps you find work-friendly rentals in beautiful locations so you can enjoy some nice weather even when you're not on vacation.
 							</p>
-							<div className="mt-4 sm:mt-6">
+							<div className="mt-4 sm:mt-6 flex flex-col sm:flex-row">
 								{/* <a className="btn btn-indigo shadow-lg" href="#">Book your escape</a>
 								<a className="btn btn-gray shadow-lg ml-2" href="#">Learn more</a> */}
 								<Button className="shadow-lg">Book your escape</Button>
-								<Button className="ml-2" type="secondary">Learn more</Button>
+								<Button className="mt-2 sm:mt-0 sm:ml-2" type="secondary">Learn more</Button>
 							</div>
 						</div>
 					</div>
@@ -75,11 +75,5 @@ function App() {
 		</ResponsiveProvider>
 	);
 }
-
-// { name: 'xs', size: 640 },
-// { name: 'sm', size: 768 },
-// { name: 'lg', size: 1024 },
-// { name: 'xl', size: 1280 },
-// { name: 'xxl', size: 1536 }
 
 export default App;

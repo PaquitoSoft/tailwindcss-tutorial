@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// import AccountDropdownXS from './account-dropdown.xs';
-// import AccountDropdownSM from './account-dropdown.sm';
 import ResponsiveComponent from '../responsive-component/responsive-component';
 
 function AccountDropdown({ children, ...props }) {

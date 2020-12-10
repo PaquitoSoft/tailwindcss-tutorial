@@ -56,10 +56,6 @@ function ResponsiveProvider({ breakpoints = BREAKPOINTS, children }) {
 		const newBreakpoint = calculateBreakpoint(reversedBreakPoints.current) || breakpoints[0];
 	
 		setCurrentBreakpoint((prevBreakpoint => {
-			// console.log('breakpoints:', {
-			// 	newBreakpoint,
-			// 	prevBreakpoint
-			// });
 			return prevBreakpoint.name !== newBreakpoint.name ? newBreakpoint : prevBreakpoint;
 		}));
 	};
